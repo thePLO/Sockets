@@ -5,8 +5,8 @@ SocketTools::~SocketTools(){}
 
 
 void SocketTools::CargarLibreria(){
-	LPWSADATA asdf=NULL;
-	int errM = WSAStartup(MAKEWORD(2, 2), asdf);
+	WSADATA a;
+	int errM = WSAStartup(MAKEWORD(2, 2), &a);
 	if (errM != 0) MostrarError();
 }
 
@@ -16,5 +16,5 @@ void SocketTools::DescargarLibreria(){
 }
 
 void SocketTools::MostrarError(){
-	std::cout<<WSAGetLastError();
+	std::cout<<WSAGetLastError()<<std::endl;
 }
