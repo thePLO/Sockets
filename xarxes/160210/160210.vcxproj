@@ -148,11 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GenericSocket.cpp" />
+    <ClCompile Include="SocketAddress.cpp" />
     <ClCompile Include="SocketTools.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GenericSocket.h" />
+    <ClInclude Include="SocketAddress.h" />
     <ClInclude Include="SocketTools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,17 +1,15 @@
 #include "GenericSocket.h"
 
+void run() {
+	GenericSocket socketU = GenericSocket(0);
+	GenericSocket socketT = GenericSocket(1);
+	//al salir del ambito de run se llama a los destructores de geneic
+}
+
 int main() {
 	SocketTools::CargarLibreria();
-
-	GenericSocket* socketU = new GenericSocket(0);
-	GenericSocket* socketT = new GenericSocket(1);
-	GenericSocket* socketE = new GenericSocket(2);
-
-	delete socketU;
-	delete socketT;
-	delete socketE;
-
+	run();
 	SocketTools::DescargarLibreria();
-	int a;
-	std::cin >> a;
+
+	system("pause");
 }

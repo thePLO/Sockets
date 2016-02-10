@@ -5,7 +5,7 @@ GenericSocket::GenericSocket(int type){
 	else if (type == 1) sock = socket(AF_INET, SOCK_STREAM, 0); //TCP
 	else std::cout<<"Not correct type"<<std::endl;
 
-	if (sock == INVALID_SOCKET) SocketTools::MostrarError();
+	if (sock == INVALID_SOCKET) SocketTools::MostrarError("Error al crear el socket");
 }
 
 GenericSocket::~GenericSocket() {
