@@ -11,3 +11,6 @@ GenericSocket::GenericSocket(int type){
 GenericSocket::~GenericSocket() {
 	closesocket(sock);
 }
+void GenericSocket::Bind(SocketAddress & address) {
+	if (bind(sock, address.GetAddress(), sizeof(sockaddr)) == -1) SocketTools::MostrarError("Error en GenericSocket::Bind");
+}

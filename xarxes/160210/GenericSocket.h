@@ -1,5 +1,6 @@
 #pragma once
 #include "SocketTools.h"
+#include "SocketAddress.h"
 
 class GenericSocket
 {
@@ -7,7 +8,10 @@ public:
 	//type: 0 UDP | 1 TCP
 	GenericSocket(int type);
 	~GenericSocket();
-private:
+
+	void Bind(SocketAddress & address);
+
+protected:
 	SOCKET sock;
 };
 

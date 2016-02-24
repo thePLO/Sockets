@@ -84,3 +84,7 @@ int SocketAddress::SetAddress(const std::string & inString){
 	return 0;
 }
 
+sockaddr* SocketAddress::GetAddress(){
+	return reinterpret_cast<sockaddr*>(&address);
+}
+
